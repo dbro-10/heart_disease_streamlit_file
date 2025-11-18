@@ -72,7 +72,3 @@ if st.button("Predict Risk of Heart Disease", type="primary"):
 st.markdown("---")
 st.caption("Machine learning model for educational purposes only.")
 
-    except Exception as e:
-        st.error(f"Load error: {e}")
-        st.stop()
-model = load_model()

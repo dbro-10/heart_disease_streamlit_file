@@ -78,3 +78,14 @@ if st.button("Predict Risk of Heart Disease", type="primary"):
 # ------------------- Footer -------------------
 st.markdown("---")
 st.caption("Model: Random Forest (200 trees) • Accuracy ~92% • ROC-AUC 0.97 on hold-out test set")
+@st.cache_resource
+def load_model():
+    try:
+        return joblib.load("final_heart_disease_model.pkl")
+    except FileNotFoundError:
+        st.error("Model file missing—check uploads!")
+        st.stop()
+    except Exception as e:
+        st.error(f"Load error: {e}")
+        st.stop()
+model = load_model()

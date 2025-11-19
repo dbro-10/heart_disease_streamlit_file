@@ -71,4 +71,7 @@ if st.button("Predict Risk of Heart Disease", type="primary"):
 # ------------------- Footer -------------------
 st.markdown("---")
 st.caption("Machine learning model for educational purposes only.")
+# ------------------- Footer -------------------
+st.markdown("---")
+st.caption("Machine learning model for educational purposes only.")
 
